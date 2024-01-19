@@ -19,19 +19,6 @@
             array[x, y, z] = 2;
             int count = 0;
 
-            
-            if (x == 0 && y == 0 ||
-                x == 0 && y == array.GetLength(1) - 1 ||
-                x == array.GetLength(0) - 1 && y == 0 ||
-                x == array.GetLength(0) - 1 && y == array.GetLength(1) - 1)
-            {
-                count += 2;
-            }
-            else if (x == 0 || y == 0 || x == array.GetLength(0) - 1 || y == array.GetLength(1) - 1)
-            {
-                count++;
-            }
-
             if (x == 0 && y == 0 && z == 0 ||
                 x == 0 && y == 0 && z == array.GetLength(2) - 1 ||
                 x == 0 && y == array.GetLength(1) - 1 && z == 0 ||
