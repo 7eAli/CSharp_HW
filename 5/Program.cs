@@ -7,18 +7,16 @@
             Calculator calculator = new Calculator();
             calculator.Result += Calculator_Result;
 
-            int num = 0;
+            
             bool flag = true;
             Actions_List();
 
             while (flag)
             {
                 Console.WriteLine("Введите число: ");
-                if (int.TryParse(Console.ReadLine(), out num)) 
-                {
-                    Console.WriteLine("Введите действие: ");
-                    flag = Action(Console.ReadLine()!, num, calculator);
-                }
+                string num = Console.ReadLine()!;
+                Console.WriteLine("Введите действие: ");
+                flag = Action(Console.ReadLine()!, num, calculator);                
             }
         }
         
@@ -33,7 +31,7 @@
             Console.WriteLine("'q' - выход");
         }
 
-        static bool Action(string action, int num, Calculator calculator)
+        static bool Action(string action, string num, Calculator calculator)
         {
             switch (action)
             {
